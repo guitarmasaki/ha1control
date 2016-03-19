@@ -37,9 +37,10 @@ install: all
 	- [ ! -f /etc/init.d/ha1control ] || /etc/init.d/ha1control stop
 	mkdir -p /var/ha1/irremote
 	cp ha1control /usr/local/bin
-	[ -f /var/ha1/ha1control.conf ] || ( [ -f ha1control.conf ] && cp ha1control.conf /var/ha1 )
+	[ -f /var/ha1/ha1control.conf ] || ( [ ! -f ha1control.conf ] || cp ha1control.conf /var/ha1 )
 	[ -f /var/ha1/ha1control.conf ] || cp sample0_ha1control.conf /var/ha1/ha1control.conf
-	[ -f /var/ha1/client.ui ] || ( [ -f client.ui ] && cp client.ui /var/ha1 )
+	[ -f /var/ha1/client.ui ] || ( [ ! -f client.ui ] || cp client.ui /var/ha1 )
+	[ -f /var/ha1/client.ui ] || cp sample0_client.ui /var/ha1/client.ui
 	cp ha2module.ha /var/ha1
 	cp irremote/* /var/ha1/irremote
 	cp ha1control.rc /etc/init.d/ha1control
