@@ -1,0 +1,9 @@
+/var/ha1/ha1control.log {
+        rotate 7
+        daily
+        missingok
+        notifempty
+        delaycompress
+        compress
+}
+

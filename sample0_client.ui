@@ -1,0 +1,19 @@
+{
+  "RoomList": [
+    { "room": "living", "label": "リビング"}
+  ],
+  "ItemList": [
+    { "room": "living", "type": "tv", "table": "TVChCommandList", "label": "ＴＶ", "siriName": ["テレビ"], "commandPrefix": "", "buttons": [{"label": "on", "command": "tv_on"}, {"label": "off", "command": "tv_off"}, {"label": "vol+", "command": "tv_vup"}, {"label": "vol-", "command": "tv_vdn"}]}
+  ],
+  "TVChCommandList": [
+    { "label": "ＮＨＫ−Ｇ", "siriName": ["NHKG", "NHK", "NHK総合"], "commandSuffix": "tv_1" },
+    { "label": "ＮＨＫ−Ｅ", "siriName": ["NHKE", "Eテレ", "NHK教育"], "commandSuffix": "tv_2" },
+    { "label": "日テレ", "siriName": ["日テレ", "日本テレビ"], "commandSuffix": "tv_4" },
+    { "label": "テレビ朝日", "siriName": ["テレビ朝日", "テレ朝"], "commandSuffix": "tv_5" },
+    { "label": "ＴＢＳ", "siriName": ["TBS"], "commandSuffix": "tv_6" },
+    { "label": "テレビ東京", "siriName": ["テレビ東京", "テレ東"], "commandSuffix": "tv_7" },
+    { "label": "フジテレビ", "siriName": ["フジテレビ"], "commandSuffix": "tv_8" },
+    { "label": "TOKYO MX", "siriName" : ["東京MX"], "commandSuffix": "tv_9" },
+    { "label": "放送大学", "siriName": ["放送大学"], "commandSuffix": "tv_12" }
+  ]
+}
