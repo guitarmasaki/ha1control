@@ -34,7 +34,7 @@ clean:
 	rm -f $(target_program)
 
 install: all
-	[ -f /etc/init.d/ha1control ] && /etc/init.d/ha1control stop
+	- [ ! -f /etc/init.d/ha1control ] || /etc/init.d/ha1control stop
 	mkdir -p /var/ha1/irremote
 	cp ha1control /usr/local/bin
 	[ -f /var/ha1/ha1control.conf ] || ( [ -f ha1control.conf ] && cp ha1control.conf /var/ha1 )
