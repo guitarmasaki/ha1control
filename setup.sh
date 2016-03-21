@@ -23,6 +23,7 @@ mv /etc/ssh/sshd_config_new /etc/ssh/sshd_config
 echo -e 'APTCOMMAND=/usr/bin/apt-get\nMAILTO="root"\nMAILON="changes"\nDEBUG="changes"\nOPTIONS="-o quiet=1"\n' > /etc/cron-apt/config
 echo -e 'autoclean -y\ndist-upgrade -d -y -o APT::Get::Show-Upgraded=true\n' > /etc/cron-apt/action.d/3-download
 
+grep 'PATH=\/usr\/local\/node\/bin' /root/.bashrc > /dev/null || echo "export PATH=/usr/local/node/bin:\$PATH" >> /root/.bashrc
 git clone https://github.com/mnakada/ha1control.git
 (cd ha1control; make; make install)
 git clone https://github.com/mnakada/HA1Observer.git
